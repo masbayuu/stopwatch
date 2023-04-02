@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Stopwatch</title>
+    <!-- Panggil stylesheet dari CDN Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .text-6xl > span {
+        margin: 0 0.1em;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div
+      class="container mx-auto py-10 flex justify-center items-center flex-col"
+    >
+      <h1 class="text-3xl font-bold text-center mb-5">Stopwatch App</h1>
+      <div class="text-6xl font-bold text-center mb-10 flex">
+        <span class="inline-block flex-1 text-center" id="jam">00</span>
+        <span class="inline-block flex-1 text-center">:</span>
+        <span class="inline-block flex-1 text-center" id="menit">00</span>
+        <span class="inline-block flex-1 text-center">:</span>
+        <span class="inline-block flex-1 text-center" id="detik">00</span>
+        <span class="inline-block flex-1 text-center" id="milidetik">:000</span>
+      </div>
+      <div class="w-full flex justify-center">
+        <button
+          id="start-stop"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-3"
+          onclick="handleStartStop()"
+        >
+          Start
+        </button>
+        <button
+          id="reset"
+          class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+          onclick="handleReset()"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
